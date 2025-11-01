@@ -101,6 +101,7 @@ export interface AIModel {
   enabled: boolean;
   apiKey?: string;
   customApiUrl?: string;
+  customModelName?: string;
 }
 
 export interface Exchange {
@@ -129,6 +130,7 @@ export interface CreateTraderRequest {
   trading_symbols?: string;
   custom_prompt?: string;
   override_base_prompt?: boolean;
+  system_prompt_template?: string;
   is_cross_margin?: boolean;
   use_coin_pool?: boolean;
   use_oi_top?: boolean;
@@ -140,6 +142,7 @@ export interface UpdateModelConfigRequest {
       enabled: boolean;
       api_key: string;
       custom_api_url?: string;
+      custom_model_name?: string;
     };
   };
 }
@@ -178,4 +181,22 @@ export interface CompetitionTraderData {
 export interface CompetitionData {
   traders: CompetitionTraderData[];
   count: number;
+}
+
+// Trader Configuration Data for View Modal
+export interface TraderConfigData {
+  trader_id?: string;
+  trader_name: string;
+  ai_model: string;
+  exchange_id: string;
+  btc_eth_leverage: number;
+  altcoin_leverage: number;
+  trading_symbols: string;
+  custom_prompt: string;
+  override_base_prompt: boolean;
+  is_cross_margin: boolean;
+  use_coin_pool: boolean;
+  use_oi_top: boolean;
+  initial_balance: number;
+  is_running: boolean;
 }
