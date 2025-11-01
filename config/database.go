@@ -384,20 +384,6 @@ type AIModelConfig struct {
 	UpdatedAt       time.Time `json:"updated_at"`
 }
 
-// AIModelConfig AI模型配置
-type AIModelConfig struct {
-	ID              string    `json:"id"`
-	UserID          string    `json:"user_id"`
-	Name            string    `json:"name"`
-	Provider        string    `json:"provider"`
-	Enabled         bool      `json:"enabled"`
-	APIKey          string    `json:"apiKey"`
-	CustomAPIURL    string    `json:"customApiUrl"`
-	CustomModelName string    `json:"customModelName"`
-	CreatedAt       time.Time `json:"created_at"`
-	UpdatedAt       time.Time `json:"updated_at"`
-}
-
 // ExchangeConfig 交易所配置
 type ExchangeConfig struct {
 	ID        string `json:"id"`
